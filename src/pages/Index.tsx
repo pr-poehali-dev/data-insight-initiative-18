@@ -4,144 +4,125 @@ export default function Index() {
       <div className="grain-overlay" />
 
       <header className="header">
-        <div className="logo">VINYL*DINER</div>
+        <div className="logo">ASTRO*SPHERE</div>
         <nav>
-          <a href="#">Меню</a>
+          <a href="#">Гороскопы</a>
+          <a href="#">Знаки</a>
           <a href="#">О нас</a>
-          <a href="#">Афиша</a>
-          <a href="#">Адреса</a>
+          <a href="#">Контакты</a>
         </nav>
-        <button className="btn-cta">Забронировать</button>
+        <button className="btn-cta">Мой гороскоп</button>
       </header>
 
       <main>
         <section className="hero">
           <div className="hero-content">
             <h1 className="hero-title">
-              БЕЗ ПОНТОВ,
+              ЗВЁЗДЫ
               <br />
-              ТОЛЬКО <span>ВКУС</span>
+              НЕ <span>ВРУТ</span>
             </h1>
-            <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-[#555]">
-              Эстетика 70-х в современной подаче. Локальные продукты, огненные блюда и атмосфера для настоящих ценителей.
+            <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed" style={{ color: "rgba(232,224,255,0.7)" }}>
+              Персональные гороскопы, астрологические прогнозы и расшифровка натальной карты. Узнай, что уготовили тебе планеты.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
-              <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }}>
-                Заказать
+              <button className="btn-cta" style={{ background: "var(--primary)", color: "white", borderColor: "var(--primary)" }}>
+                Узнать прогноз
               </button>
-              <button className="btn-cta" style={{ background: "white" }}>
-                Смотреть меню
+              <button className="btn-cta" style={{ background: "transparent", color: "var(--dark)", borderColor: "var(--dark)" }}>
+                Все знаки зодиака
               </button>
             </div>
           </div>
-          <div className="hero-img">
+          <div className="hero-img" style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/89cad37f-4387-4543-a469-193e6fb99911/files/e395ed21-cee1-4e6e-8f3f-3b5300f8f1ab.jpg')` }}>
             <div className="sticker">
-              СВЕЖАК
+              ПРОГНОЗ
               <br />
-              КАЖДЫЙ ДЕНЬ
+              НА СЕГОДНЯ
             </div>
             <div className="floating-tag hidden md:block" style={{ top: "20%", left: "10%" }}>
-              #ЭСТЕТИКА
+              ✨ РЕТРОГРАДНЫЙ
             </div>
             <div className="floating-tag hidden md:block" style={{ bottom: "30%", right: "20%" }}>
-              ОГОНЬ
+              МЕРКУРИЙ
             </div>
           </div>
         </section>
 
         <div className="marquee">
           <div className="marquee-content">
-            &nbsp; * БУРГЕРЫ КОТОРЫЕ РВУТ * КРАФТОВЫЕ КОКТЕЙЛИ * ТОЛЬКО РЕТРО ВАЙБ * ОТКРЫТЫ ДО 2:00 * ЛУЧШИЕ В ГОРОДЕ *
-            БУРГЕРЫ КОТОРЫЕ РВУТ * КРАФТОВЫЕ КОКТЕЙЛИ * ТОЛЬКО РЕТРО ВАЙБ * ОТКРЫТЫ ДО 2:00 * ЛУЧШИЕ В ГОРОДЕ
+            &nbsp; * ОВЕН * ТЕЛЕЦ * БЛИЗНЕЦЫ * РАК * ЛЕВ * ДЕВА * ВЕСЫ * СКОРПИОН * СТРЕЛЕЦ * КОЗЕРОГ * ВОДОЛЕЙ * РЫБЫ *
+            ОВЕН * ТЕЛЕЦ * БЛИЗНЕЦЫ * РАК * ЛЕВ * ДЕВА * ВЕСЫ * СКОРПИОН * СТРЕЛЕЦ * КОЗЕРОГ * ВОДОЛЕЙ * РЫБЫ
           </div>
         </div>
 
         <section className="section-padding">
           <div className="section-header">
-            <h2 className="section-title">ВЫБОР ШЕФА</h2>
+            <h2 className="section-title">ГОРОСКОПЫ</h2>
             <a
               href="#"
               className="text-sm md:text-base"
               style={{ color: "var(--dark)", fontWeight: 800, textTransform: "uppercase" }}
             >
-              Всё меню
+              Все прогнозы
             </a>
           </div>
 
           <div className="menu-grid">
-            {/* Item 1 */}
+            {/* Card 1 */}
             <div className="menu-card">
-              <span className="menu-tag">Хит продаж</span>
+              <span className="menu-tag">Популярное</span>
               <img
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Классический бургер"
+                src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Гороскоп на неделю"
               />
               <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Классика</h3>
-                  <span className="price">1 400 ₽</span>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                  <h3 style={{ color: "var(--dark)" }}>Гороскоп на неделю</h3>
+                  <span className="price">Бесплатно</span>
                 </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>
-                  Тройной смэш из мраморной говядины, фирменный соус, маринованные огурцы на бриоши.
+                <p style={{ fontSize: "14px", color: "rgba(232,224,255,0.6)" }}>
+                  Подробный прогноз на 7 дней для каждого знака зодиака. Деньги, любовь, карьера.
                 </p>
               </div>
             </div>
 
-            {/* Item 2 */}
+            {/* Card 2 */}
             <div className="menu-card">
               <span className="menu-tag" style={{ background: "var(--secondary)" }}>
-                Острое
+                Хит
               </span>
               <img
-                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Неоновая пицца"
+                src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Натальная карта"
               />
               <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Электро Пепперони</h3>
-                  <span className="price">1 800 ₽</span>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                  <h3 style={{ color: "var(--dark)" }}>Натальная карта</h3>
+                  <span className="price">990 ₽</span>
                 </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>Двойная пепперони, острый мёд, тесто на закваске.</p>
+                <p style={{ fontSize: "14px", color: "rgba(232,224,255,0.6)" }}>
+                  Полная расшифровка вашей натальной карты с личным комментарием астролога.
+                </p>
               </div>
             </div>
 
-            {/* Item 3 */}
+            {/* Card 3 */}
             <div className="menu-card">
-              <span className="menu-tag" style={{ background: "var(--accent)", color: "var(--dark)" }}>
-                Популярное
+              <span className="menu-tag" style={{ background: "var(--accent)", color: "#0d0b1e" }}>
+                Новинка
               </span>
               <img
-                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Диско Сауэр"
+                src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Совместимость"
               />
               <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Диско Сауэр</h3>
-                  <span className="price">1 200 ₽</span>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                  <h3 style={{ color: "var(--dark)" }}>Совместимость</h3>
+                  <span className="price">590 ₽</span>
                 </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>
-                  Джин, цветок бузины, голубой чай и съедобная золотая пыльца.
+                <p style={{ fontSize: "14px", color: "rgba(232,224,255,0.6)" }}>
+                  Астрологический анализ совместимости двух знаков. Любовь, дружба, бизнес.
                 </p>
               </div>
             </div>
@@ -150,45 +131,44 @@ export default function Index() {
 
         <section className="retro-vibe">
           <div>
-            <h2 className="vibe-title">ВАЙБ-ЧЕК ПРОЙДЕН.</h2>
+            <h2 className="vibe-title">КОСМОС ВНУТРИ ТЕБЯ.</h2>
             <p className="vibe-text">
-              Мы не просто кормим. Мы создаём моменты. От плейлиста хип-хопа 90-х до диванов в стиле 70-х — каждый уголок
-              продуман для твоего идеального кадра. Бронь не нужна, просто приходи с настроением.
+              Астрология — это не судьба, это карта возможностей. Мы помогаем читать звёзды так, чтобы каждый день становился осознанным выбором. Более 10 000 человек уже нашли свой путь с нами.
             </p>
-            <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }}>
+            <button className="btn-cta" style={{ background: "var(--dark)", color: "#0d0b1e", borderColor: "var(--dark)" }}>
               Наша история
             </button>
           </div>
-          <div className="vibe-img"></div>
+          <div className="vibe-img" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')" }}></div>
         </section>
 
         <section className="section-padding">
           <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
-            @VINYL.DINER
+            @ASTRO.SPHERE
           </h2>
           <div className="social-grid">
             <div className="social-item">
               <img
-                src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 1"
+                src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Астрология 1"
               />
             </div>
             <div className="social-item">
               <img
-                src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 2"
+                src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Астрология 2"
               />
             </div>
             <div className="social-item">
               <img
-                src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 3"
+                src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Астрология 3"
               />
             </div>
             <div className="social-item">
               <img
-                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 4"
+                src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Астрология 4"
               />
             </div>
           </div>
@@ -197,9 +177,9 @@ export default function Index() {
 
       <footer>
         <div>
-          <div className="footer-logo">VINYL*DINER</div>
-          <p style={{ color: "#666", lineHeight: 1.6 }}>
-            Твоё место для еды высокого качества и лоу-фай атмосферы. С 2024, но ощущается как 1974.
+          <div className="footer-logo">ASTRO*SPHERE</div>
+          <p style={{ color: "rgba(232,224,255,0.5)", lineHeight: 1.6 }}>
+            Твой персональный астролог онлайн. Гороскопы, натальные карты и астрологические прогнозы с 2024 года.
           </p>
         </div>
         <div className="footer-links">
@@ -207,7 +187,12 @@ export default function Index() {
           <ul>
             <li>
               <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Меню
+                Гороскопы
+              </a>
+            </li>
+            <li>
+              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+                Знаки зодиака
               </a>
             </li>
             <li>
@@ -220,26 +205,36 @@ export default function Index() {
                 Политика
               </a>
             </li>
+          </ul>
+        </div>
+        <div className="footer-links">
+          <h4>Услуги</h4>
+          <ul>
             <li>
               <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Условия
+                Натальная карта
+              </a>
+            </li>
+            <li>
+              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+                Совместимость
+              </a>
+            </li>
+            <li>
+              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+                Прогноз на год
+              </a>
+            </li>
+            <li>
+              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+                Консультация
               </a>
             </li>
           </ul>
         </div>
-        <div className="footer-links">
-          <h4>Часы работы</h4>
-          <ul>
-            <li>Вт-Чт: 12:00 - 23:00</li>
-            <li>Пт-Сб: 12:00 - 02:00</li>
-            <li>Вс: 11:00 - 21:00</li>
-            <li>Пн: Выходной</li>
-          </ul>
-        </div>
         <div className="footer-bottom">
-          <span>2025 VINYL DINER</span>
-          <span>ВКУС КЛАССИКИ</span>
-          <span>IG / TW / TK</span>
+          <span>© 2024 ASTRO*SPHERE — Все права защищены</span>
+          <span>Звёзды расскажут всё ✨</span>
         </div>
       </footer>
     </>
