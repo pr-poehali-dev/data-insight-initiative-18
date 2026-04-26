@@ -44,9 +44,9 @@ export default function Natal() {
         <div className="logo"><a href="/" style={{ textDecoration: "none", color: "inherit" }}>ASTRO*SPHERE</a></div>
         <nav>
           <a href="/horoscopes">Гороскопы</a>
-          <a href="#">Знаки</a>
-          <a href="#">О нас</a>
-          <a href="#">Контакты</a>
+          <a href="/lunar">Луна</a>
+          <a href="/blog">Блог</a>
+          <a href="/natal">Услуги</a>
         </nav>
         <a href="/horoscopes"><button className="btn-cta">Гороскопы</button></a>
       </header>

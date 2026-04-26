@@ -26,9 +26,9 @@ export default function Index() {
         <div className="logo">ASTRO*SPHERE</div>
         <nav>
           <a href="/horoscopes">Гороскопы</a>
-          <a href="#">Знаки</a>
-          <a href="#">О нас</a>
-          <a href="#">Контакты</a>
+          <a href="/lunar">Луна</a>
+          <a href="/blog">Блог</a>
+          <a href="/natal">Услуги</a>
         </nav>
         <a href="/natal"><button className="btn-cta">Мой гороскоп</button></a>
       </header>
@@ -206,6 +206,32 @@ export default function Index() {
             </a>
           </div>
           <div className="vibe-img" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')" }}></div>
+        </section>
+
+        {/* Reviews */}
+        <section className="section-padding" style={{ borderTop: "var(--border)" }}>
+          <h2 className="section-title" style={{ marginBottom: "12px", textAlign: "center" }}>ОТЗЫВЫ</h2>
+          <p style={{ color: "rgba(232,224,255,0.5)", textAlign: "center", marginBottom: "48px" }}>Что говорят наши клиенты</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
+            {[
+              { name: "Анна К.", sign: "♍ Дева", stars: "★★★★★", text: "Натальная карта перевернула моё представление о себе. Астролог точно описал мои страхи и таланты — как будто знала меня всю жизнь. Рекомендую всем!" },
+              { name: "Михаил Р.", sign: "♏ Скорпион", stars: "★★★★★", text: "Скептически относился к астрологии, но прогноз на неделю совпал настолько точно, что теперь читаю каждый день. Сайт стал частью утреннего ритуала." },
+              { name: "Елена В.", sign: "♓ Рыбы", stars: "★★★★☆", text: "Заказала анализ совместимости с партнёром — очень глубокий разбор. Многое объяснил в наших отношениях. Буду заказывать прогноз на год." },
+              { name: "Дарья М.", sign: "♌ Лев", stars: "★★★★★", text: "Обожаю гороскопы на этом сайте — они живые, не шаблонные. Чувствуется, что написано с душой и знанием дела. Подписала всех подруг!" },
+            ].map((r) => (
+              <div key={r.name} style={{ background: "#1a1535", border: "var(--border)", borderColor: "rgba(232,224,255,0.15)", padding: "28px", transition: "0.2s" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "var(--shadow)"; (e.currentTarget as HTMLDivElement).style.transform = "translate(-4px,-4px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "none"; }}
+              >
+                <div style={{ color: "var(--accent)", fontSize: "20px", marginBottom: "14px", letterSpacing: "2px" }}>{r.stars}</div>
+                <p style={{ color: "rgba(232,224,255,0.8)", lineHeight: 1.7, fontSize: "15px", marginBottom: "20px" }}>«{r.text}»</p>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <span style={{ color: "var(--dark)", fontWeight: 800, fontSize: "14px", textTransform: "uppercase" }}>{r.name}</span>
+                  <span style={{ color: "var(--primary)", fontSize: "13px", fontWeight: 700 }}>{r.sign}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="section-padding">
